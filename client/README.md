@@ -1,16 +1,99 @@
-# React + Vite
+ ChatSphere — Real-Time Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ChatSphere is a web-based messaging application designed to make communication between users simple and interactive. It combines a React frontend with a Node.js and Express backend, MongoDB for message persistence, and Socket.IO for real-time communication.
 
-Currently, two official plugins are available:
+The project was developed as a team project to explore how frontend and backend technologies work together to build a real-time web application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
 
-## React Compiler
+* Google Authentication: Firebase Authentication for Google sign-in.
+* Real-Time Messaging: Socket.IO for real-time message communication.
+* Message Persistence: MongoDB stores messages so conversation history can be retrieved.
+* User Search: Find users to start a conversation.
+* Message Timestamps: Display timestamps alongside messages.
+* Responsive Web Interface: A chat interface built with React.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tech Stack
 
-## Expanding the ESLint configuration
+Frontend
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* JavaScript
+* Axios
+
+Backend
+
+* Node.js
+* Express.js
+* Socket.IO
+
+Database and Authentication
+
+* MongoDB
+* Mongoose
+* Firebase Authentication
+
+Project Structure
+
+ChatSphere/
+├── client/     # React frontend
+└── server/     # Node.js and Express backend
+
+Getting Started
+
+Prerequisites
+
+* Node.js and npm
+* MongoDB connection
+* Firebase project configured for Google Authentication
+
+1. Clone the repository
+
+git clone https://github.com/harshita-0417/ChatSphere.git
+cd ChatSphere
+
+2. Set up the backend
+
+Open a terminal in the server directory:
+
+cd server
+npm install
+
+Configure the required environment variables in a local .env file according to the variables used by the server code. Do not commit .env files or credentials to GitHub.
+
+Start the backend using the start command defined in server/package.json.
+
+3. Set up the frontend
+
+Open another terminal in the client directory:
+
+cd client
+npm install
+npm run dev
+
+Open the local URL printed by Vite in your terminal.
+
+4. Configure Firebase and MongoDB
+
+Before running the application, configure Firebase Google Authentication and provide the MongoDB connection settings required by the backend. Check the project code for the exact environment variable names and configuration requirements.
+
+Learning Outcomes
+
+This project provided practical experience with frontend and backend integration, REST API communication, database connectivity, authentication, and real-time communication using WebSockets through Socket.IO.
+
+Future Improvements
+
+* Strengthen backend authentication and authorization.
+* Improve input validation and error handling.
+* Add deployment configuration and production environment settings.
+* Improve automated testing and application reliability.
+* Enhance the user experience across devices.
+
+Project Status
+
+This is a student team project. Local setup and end-to-end functionality should be verified before treating it as production-ready.
+
+Contributors
+
+Developed collaboratively as a team project.
