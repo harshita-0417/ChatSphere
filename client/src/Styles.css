@@ -1,0 +1,37 @@
+:root {
+  --bg: #f7f7f7;
+  --panel: #ffffff;
+  --muted: #777;
+  --accent: #2b8be8;
+}
+
+body,html,#root { height:100%; margin:0; font-family: Inter, system-ui, Arial; background:var(--bg); }
+.centered { height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; }
+.btn { background:var(--accent); color:white; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; }
+.small-btn { padding:6px 8px; font-size:12px; margin-left:auto; }
+.muted { color:var(--muted); font-size:13px; }
+.bold { font-weight:700; }
+
+.container { display:flex; height:100vh; }
+.sidebar { width:320px; background:var(--panel); border-right:1px solid #e6e6e6; padding:16px; display:flex; flex-direction:column; gap:12px; }
+.me { display:flex; align-items:center; gap:8px; }
+.avatar { width:48px; height:48px; border-radius:24px; object-fit:cover; }
+.avatar-sm { width:36px; height:36px; border-radius:18px; object-fit:cover; margin-right:8px; }
+.search-area input { width:100%; padding:8px; border:1px solid #ddd; border-radius:6px; }
+.btn.full { width:100%; margin-top:8px; }
+
+.results { margin-top:8px; overflow-y:auto; max-height:60vh; }
+.result { display:flex; align-items:center; gap:8px; padding:8px; border-bottom:1px solid #f0f0f0; cursor:pointer; }
+
+.chat-area { flex:1; display:flex; flex-direction:column; }
+.chat-header { padding:12px; display:flex; gap:12px; align-items:center; background:var(--panel); border-bottom:1px solid #eee; }
+.messages { flex:1; padding:12px; overflow-y:auto; background: linear-gradient(180deg,#f9f9f9, #fff); }
+.message { display:flex; margin-bottom:8px; }
+.message.me { justify-content:flex-end; }
+.bubble { max-width:70%; padding:10px; border-radius:8px; background:white; box-shadow:0 0 2px rgba(0,0,0,0.06); }
+.message.me .bubble { background:#DCF8C6; }
+.time { font-size:11px; color:var(--muted); margin-top:6px; }
+
+.composer { padding:12px; display:flex; gap:8px; border-top:1px solid #eee; background:var(--panel); }
+.composer input { flex:1; padding:8px; border:1px solid #ddd; border-radius:6px; }
+.empty { display:flex; align-items:center; justify-content:center; flex:1; color:var(--muted); }
